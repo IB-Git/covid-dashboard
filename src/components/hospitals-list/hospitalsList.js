@@ -59,7 +59,8 @@ const HospitalsList = () => {
                 <li className="name">
                   <h4>
                     {" "}
-                    <RiHospitalLine /> Name - <span>{item.Hospital_Name}</span>
+                    <RiHospitalLine /> Name - <br></br>
+                    <span>{item.Hospital_Name}</span>
                   </h4>
                   <p>
                     {" "}
@@ -112,13 +113,16 @@ const HospitalsList = () => {
                   </h3>
                 </li>
                 <li className="phone">
-                  <>
+                  <h3>
                     <VscCallOutgoing /> Phone -{" "}
-                  </>
+
                   <span className="inner">{item.Hospital_Phone_Number}</span>
-                </li>
+                  </h3>
+                  </li>
+                
                 <li>
-                  <FaBed /> Bed -{" "}
+                  <h3>
+                  <FaBed /> Bed - <br></br>{" "}
                   {item.Bed_Availability === "Available" ? (
                     <li className="no-bullets_available">
                       {" "}
@@ -137,8 +141,10 @@ const HospitalsList = () => {
                   ) : (
                     "-"
                   )}{" "}
+                  </h3>
                 </li>
                 <li>
+                  <h3>
                   <TiWaves /> Oxygen -{" "}
                   {item.Oxygen_Availability === "Available" ? (
                     <li className="no-bullets_available">
@@ -158,8 +164,11 @@ const HospitalsList = () => {
                   ) : (
                     "-"
                   )}
+                  </h3>
                 </li>
+                
                 <li>
+                  <h3>
                   <MdLocalHospital /> Ventilator -{" "}
                   {item.Ventilator_Availability === "Available" ? (
                     <li className="no-bullets_available">
@@ -179,6 +188,7 @@ const HospitalsList = () => {
                   ) : (
                     "-"
                   )}
+                  </h3>
                 </li>
 
                 <br />
